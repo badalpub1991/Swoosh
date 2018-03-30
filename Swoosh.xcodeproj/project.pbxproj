@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		5FDBC1611FED36410032004C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBC1601FED36410032004C /* AppDelegate.swift */; };
-		5FDBC1631FED36410032004C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBC1621FED36410032004C /* ViewController.swift */; };
+		5FDBC1631FED36410032004C /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBC1621FED36410032004C /* WelcomeVC.swift */; };
 		5FDBC1661FED36410032004C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDBC1641FED36410032004C /* Main.storyboard */; };
 		5FDBC1681FED36410032004C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FDBC1671FED36410032004C /* Assets.xcassets */; };
 		5FDBC16B1FED36410032004C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDBC1691FED36410032004C /* LaunchScreen.storyboard */; };
 		5FDBC1761FED36420032004C /* SwooshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBC1751FED36420032004C /* SwooshTests.swift */; };
 		5FDBC1811FED36420032004C /* SwooshUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBC1801FED36420032004C /* SwooshUITests.swift */; };
+		5FDBC1921FED42200032004C /* BASCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBC1911FED42200032004C /* BASCustomButton.swift */; };
+		5FDBC1941FED51D90032004C /* LeagueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBC1931FED51D90032004C /* LeagueVC.swift */; };
+		5FDBC1961FED52BC0032004C /* SkillVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBC1951FED52BC0032004C /* SkillVC.swift */; };
+		5FDBC1981FED62170032004C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBC1971FED62170032004C /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		5FDBC15D1FED36410032004C /* Swoosh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swoosh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FDBC1601FED36410032004C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5FDBC1621FED36410032004C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5FDBC1621FED36410032004C /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		5FDBC1651FED36410032004C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FDBC1671FED36410032004C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FDBC16A1FED36410032004C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		5FDBC17C1FED36420032004C /* SwooshUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwooshUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FDBC1801FED36420032004C /* SwooshUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwooshUITests.swift; sourceTree = "<group>"; };
 		5FDBC1821FED36420032004C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FDBC1911FED42200032004C /* BASCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BASCustomButton.swift; sourceTree = "<group>"; };
+		5FDBC1931FED51D90032004C /* LeagueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueVC.swift; sourceTree = "<group>"; };
+		5FDBC1951FED52BC0032004C /* SkillVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillVC.swift; sourceTree = "<group>"; };
+		5FDBC1971FED62170032004C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +105,10 @@
 		5FDBC15F1FED36410032004C /* Swoosh */ = {
 			isa = PBXGroup;
 			children = (
+				5FDBC1901FED36640032004C /* View */,
+				5FDBC18F1FED365C0032004C /* Model */,
+				5FDBC18E1FED364C0032004C /* ViewController */,
 				5FDBC1601FED36410032004C /* AppDelegate.swift */,
-				5FDBC1621FED36410032004C /* ViewController.swift */,
 				5FDBC1641FED36410032004C /* Main.storyboard */,
 				5FDBC1671FED36410032004C /* Assets.xcassets */,
 				5FDBC1691FED36410032004C /* LaunchScreen.storyboard */,
@@ -123,6 +133,32 @@
 				5FDBC1821FED36420032004C /* Info.plist */,
 			);
 			path = SwooshUITests;
+			sourceTree = "<group>";
+		};
+		5FDBC18E1FED364C0032004C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5FDBC1621FED36410032004C /* WelcomeVC.swift */,
+				5FDBC1931FED51D90032004C /* LeagueVC.swift */,
+				5FDBC1951FED52BC0032004C /* SkillVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5FDBC18F1FED365C0032004C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5FDBC1971FED62170032004C /* Player.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5FDBC1901FED36640032004C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5FDBC1911FED42200032004C /* BASCustomButton.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FDBC1631FED36410032004C /* ViewController.swift in Sources */,
+				5FDBC1631FED36410032004C /* WelcomeVC.swift in Sources */,
+				5FDBC1941FED51D90032004C /* LeagueVC.swift in Sources */,
+				5FDBC1921FED42200032004C /* BASCustomButton.swift in Sources */,
+				5FDBC1961FED52BC0032004C /* SkillVC.swift in Sources */,
+				5FDBC1981FED62170032004C /* Player.swift in Sources */,
 				5FDBC1611FED36410032004C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

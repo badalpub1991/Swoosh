@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func movetoNextVc(_ sender: Any) {
+      performSegue(withIdentifier: "showleague", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showleague" {
+            guard let leaguevc = segue.destination as? LeagueVC
+                else {return}
+        }
+    }
+    
 }
 
