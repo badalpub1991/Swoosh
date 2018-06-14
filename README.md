@@ -233,4 +233,25 @@ Commit Model
 
     }
     
+ Get Indexpath on UIButtonClick
+ 
+       @IBAction func onCommitAndReleaseClick(_ sender: UIButton) {
+        let point = sender.convert(CGPoint.zero, to: self.reposTableView)
+        let hitIndex = self.reposTableView.indexPathForRow(at: point)
+        if sender.tag == 0 {
+            let commit_url = repos[(hitIndex?.row)!].commits_url.components(separatedBy: "{/sha}")[0]
+            moveToNextVC(actionType: .commits, withIndex: (hitIndex?.row)!, WithURL: commit_url)
+        } else {
+            let release = repos[(hitIndex?.row)!].releases_url.components(separatedBy: "{/id}")[0]
+            moveToNextVC(actionType: .releases, withIndex: (hitIndex?.row)!, WithURL: release)
+        }
+    }
+    
+    func moveToNextVC(actionType:ActionType, withIndex index:Int, WithURL url:String) {
+        guard let commitsrepoVC = storyboard?.instantiateViewController(withIdentifier: "CommitsRepoVC") as? CommitsRepoVC else {return}
+        commitsrepoVC.initData(url: url, actionType: actionType)
+        self.navigationController?.pushViewController(commitsrepoVC, animated: true)
+        
+    }
+    
 
