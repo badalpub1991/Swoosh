@@ -211,4 +211,26 @@ Commit Model
     let type : String?
     let site_admin : Bool?
     }
+    
+ Image Load
+ 
+      func configureCell(commits:Commits) {
+        self.lblName.text = commits.commit?.author?.name
+        self.lblDate.text = commits.commit?.author?.date
+        
+        if commits.committer?.avatar_url == nil {
+            self.avtarImageView.image = #imageLiteral(resourceName: "no_image")
+        } else {
+        DataServices.instance.getDataFromUrl(url: NSURL(string: (commits.committer?.avatar_url)!)! as URL) { (data, response, error) in
+            DispatchQueue.main.async {
+                self.avtarImageView.image = UIImage(data: data!)
+            }
+        }
+        }
+        if commits.commit?.comment_count == 0 {
+            self.lblComment.text = "No comment found for this repo"
+        }
+
+    }
+    
 
