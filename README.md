@@ -138,3 +138,77 @@
 
         
     }
+    
+Commit Model
+
+
+     import Foundation
+
+    struct Commits: Decodable {    //All key in Same Order and As Same name for Encode and Decode Json as Swift4
+    
+    public private(set)  var sha : String?
+    public private(set) var commit : Commit?
+    public private(set)  var url : String?
+    public private(set)  var html_url : String?
+    public private(set)  var comments_url : String?
+    public private(set) var author : Author?
+    public private(set)  var committer : Committer?
+    
+    
+  
+
+   
+    }
+
+    struct Commit : Decodable {
+
+    public private(set) var author : Author?
+    public private(set) var committer : Committer?
+    public private(set) var comment_count : Double?
+    
+
+    }
+
+    struct Author : Decodable {
+    let name : String?
+    let date : String?
+    let login : String?
+    let id : Int?
+    let avatar_url : String!
+    let gravatar_id : String?
+    let url : String?
+    let html_url : String?
+    let followers_url : String?
+    let following_url : String?
+    let gists_url : String?
+    let starred_url : String?
+    let subscriptions_url : String?
+    let organizations_url : String?
+    let repos_url : String?
+    let events_url : String?
+    let received_events_url : String?
+    let type : String?
+    let site_admin : Bool?
+
+    }
+
+    struct Committer : Decodable {
+    let login : String?
+    let id : Int?
+    let avatar_url : String?
+    let gravatar_id : String?
+    let url : String?
+    let html_url : String?
+    let followers_url : String?
+    let following_url : String?
+    let gists_url : String?
+    let starred_url : String?
+    let subscriptions_url : String?
+    let organizations_url : String?
+    let repos_url : String?
+    let events_url : String?
+    let received_events_url : String?
+    let type : String?
+    let site_admin : Bool?
+    }
+
