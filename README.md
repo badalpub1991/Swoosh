@@ -1,5 +1,12 @@
 # Swoosh
 
+InitData 
+  
+     func initData(url:String , actionType:ActionType) {
+       self.url = url
+        self.actionType = actionType
+    }
+
 //
 //  DataServices.swift
 //  Comapi
