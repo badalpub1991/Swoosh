@@ -8,18 +8,18 @@
 //  Copyright © 2018 badal shah. All rights reserved.
 //
 
-import Foundation
-import UIKit
-class DataServices {
-    static let instance = DataServices()
+     import Foundation
+     import UIKit
+     class DataServices {
+        static let instance = DataServices()
     
-    var repos = [Repos]() //Array of Channel Object
-    var commits = [Commits]()
-    var releases = [Releases]()
-    var image=UIImage()
+      var repos = [Repos]() //Array of Channel Object
+      var commits = [Commits]()
+      var releases = [Releases]()
+      var image=UIImage()
 
     
-   //Get repos
+    //Get repos
 
     func makeGetCall(complition: @escaping ComplitionHandler) {
         // Set up the URL request
@@ -137,4 +137,4 @@ class DataServices {
     
 
         
-}
+    }
